@@ -131,10 +131,10 @@ label= "SYM"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp LS(LA(LC(Q)))    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp RA(U)   &kp SQT     &kp DQT       
-                &kp RA(A)   &trans      &kp RA(S)   &trans      &trans          &kp C_MUTE  &kp LS(RA(N4)) &kp RA(N5) &kp RA(N4)   &kp RA(O) 
-    &trans      &kp RA(F18) &kp RA(F19) &trans      &trans      &trans          &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT  &kp BSLH   &trans         
-                                        &trans      &gif        &mo ADJ         &trans      &kp C_PP    &trans      
+                &kp LS(LA(LC(Q)))    &kp LS(LA(LC(W)))      &kp UP_ARROW    &kp LS(LA(LC(P)))    &kp LS(LA(LC(B)))       &kp LS(LA(LC(J)))   &kp LS(LA(LC(L)))    &kp LS(LA(LC(U)))   &kp LS(LA(LC(Y)))     &kp LS(LA(LC(SEMI)))       
+                &kp LS(LA(LC(A)))   &kp LEFT_ARROW      &kp DOWN_ARROW   &kp RIGHT_ARROW      &kp LS(LA(LC(M)))          &kp LS(LA(LC(M)))  &kp LS(LA(LC(N))) &kp LS(LA(LC(E))) &kp LS(LA(LC(I)))   &kp LS(LA(LC(O))) 
+    &trans      &kp LS(LA(LC(Z))) &kp LS(LA(LC(X))) &kp LG(C)      &LS(LA(LC(D)))      &kp LG(LS(LA(V)))          &kp LS(LA(LC(K))) &kp LS(LA(LC(H))) &kp LS(LA(LC(COMMA))) &kp LS(LA(LC(DOT)))  &kp LS(LA(LC(FSLH)))   &trans         
+                                        &trans      &trans        &trans         &kp RA(RET)      &trans    &trans      
                         >;
                 };
 
