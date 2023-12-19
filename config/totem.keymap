@@ -73,7 +73,6 @@ label= "BASE"                              ;
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
                 &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RCTRL E &mt RALT I  &mt RGUI O
     &mt LSHFT MINUS   &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &mt RSHFT SINGLE_QUOTE
-                                        &lt 3 ESC  &lt 2 SAPCE &mt LGUI RET   &none &none &none
                         >;
                 };
 
