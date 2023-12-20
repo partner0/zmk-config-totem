@@ -17,9 +17,9 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
-#define NAV  1
-#define SYM  2
-#define ADJ  3
+#define NUM  1
+#define NAV  2
+#define SYM  3
 
 &mt {
   quick-tap-ms = <100>;
@@ -29,34 +29,6 @@
 };
 
 / {
-     combos {
-            compatible = "zmk,combos";
-            combo_esc {
-                timeout-ms = <50>;
-                key-positions = <0 1>;
-                bindings = <&kp ESC>;
-            };
-            combo_tvp {
-                timeout-ms = <100>;
-                key-positions = <11 12 13>;
-                bindings = <&tog TVP1>;
-            };
-    };
-
-    macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp N2>
-                , <&macro_release &kp LSHFT>
-                , <&macro_tap &kp G &kp I &kp F>
-                ;
-        };
-    };
-
         keymap {
                 compatible = "zmk,keymap";
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -73,8 +45,8 @@ label= "BASE";
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-                nav_layer {
-label= "NAVI";
+                num_layer {
+label= "NUM";
  bindings = <
 			&kp EXCL	&kp AT	&kp HASH	&kp DOLLAR	&kp PERCENT		&kp CARET	&kp AMPS	&kp STAR	&kp LPAR	&kp RPAR
 			&kp N1		&kp N2	&kp N3		&kp N4		&kp N5			&kp N6		&kp N7		&kp N8		&kp N9		&kp N0
@@ -85,8 +57,8 @@ label= "NAVI";
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-                sim_layer {
-label= "SYM";
+                nav_layer {
+label= "NAV";
  bindings = <
 			&kp LS(LA(LC(Q)))	&kp LS(LA(LC(W)))	&kp UP_ARROW	&kp LS(LA(LC(P)))	&kp LS(LA(LC(B)))		&kp LS(LA(LC(J)))	&kp LS(LA(LC(L)))	&kp LS(LA(LC(U)))		&kp LS(LA(LC(Y)))	&kp LS(LA(LC(SEMI)))
 			&kp LS(LA(LC(A)))	&kp LEFT_ARROW		&kp DOWN_ARROW	&kp RIGHT_ARROW		&kp LS(LA(LC(G)))		&kp LS(LA(LC(M)))	&kp LS(LA(LC(N)))	&kp LS(LA(LC(E)))		&kp LS(LA(LC(I)))	&kp LS(LA(LC(O)))
@@ -97,8 +69,8 @@ label= "SYM";
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-                adjust_layer {
-label= "ADJ";
+                sym_layer {
+label= "SYM";
  bindings = <
 			&kp TILDE	&kp HOME			&kp LS(UP_ARROW)	&kp END				&kp PIPE		&kp LBKT	&kp RBKT	&kp PLUS	&trans	&trans
 			&kp GRAVE	&kp LS(LEFT_ARROW)	&kp LS(DOWN_ARROW)	&kp LS(RIGHT_ARROW)	&kp BSLH		&kp LPAR	&kp RPAR	&kp EQUAL	&trans	&trans
