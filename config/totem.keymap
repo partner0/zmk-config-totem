@@ -1,84 +1,58 @@
-//
-//                                                        ▀▀▀▀▀     ▀▀▀▀▀          ▀▀█▀▀
-//                                                        ▄▀▀▀▄  ▄  ▄▀▀▀▄  ▄  ▄▀▀▀▄  █  ▄▀▀▀▄
-//                                                        █   █  █  █   █  █  █   █  █  █   █
-//                                                         ▀▀▀   █   ▀▀▀   █   ▀▀▀   ▀   ▀▀▀
-//                                                               █      ▄▄▄█▄▄▄    █   █  
-//                                                               ▀      █  █  █     █▄█
-//                                                             ▀▀▀▀▀    █  █  █      ▀
-//                                                                      ▀  ▀  ▀
-//
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-       
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
-#define NAV  1
-#define SYM  2
-#define ADJ  3
+#define NUM  1
+#define NAV  2
+#define SYM  3
 
 &mt {
-  quick-tap-ms = <100>;
-  global-quick-tap;
-  flavor = "tap-preferred";
-  tapping-term-ms = <170>;
+	quick-tap-ms = <100>;
+	global-quick-tap;
+	flavor = "tap-preferred";
+	tapping-term-ms = <200>;
 };
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-                base_layer {
-label= "BASE";
- bindings = <
+	keymap {
+		compatible = "zmk,keymap";
+		base_layer {
+			label= "BASE";
+			bindings = <
 					&kp Q	&kp W	&kp F		&kp P		&kp B			&kp J			&kp L		&kp U		&kp Y	&kp SEMI
 					&kp A	&kp R	&kp S		&kp T		&kp G			&kp M			&kp N		&kp E		&kp I	&kp O
 	&mt LSHFT MINUS	&kp Z	&kp X	&kp C		&kp D		&kp V			&kp K			&kp H		&kp COMMA   &kp DOT	&kp FSLH	&mt RCTRL APOS
-    								&lt 3 ESC	&lt 2 SPACE	&mt LGUI RET	&mt RSHFT BSPC	&lt 1 SPACE	&mt RALT TAB
-                        >;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-                nav_layer {
-label= "NAVI";
- bindings = <
+									&lt 3 ESC	&lt 2 SPACE	&mt LGUI RET	&mt RSHFT BSPC	&lt 1 SPACE	&mt RALT TAB
+			>;
+		};
+		num_layer {
+			label= "NUM";
+			bindings = <
 			&kp EXCL	&kp AT	&kp HASH	&kp DOLLAR	&kp PERCENT		&kp CARET	&kp AMPS	&kp STAR	&kp LPAR	&kp RPAR
 			&kp N1		&kp N2	&kp N3		&kp N4		&kp N5			&kp N6		&kp N7		&kp N8		&kp N9		&kp N0
 	&trans	&kp F1		&kp F2	&kp F3		&kp F4		&kp F5			&kp F6		&kp F7		&kp F8		&kp F9		&kp F10 &trans
 								&trans		&trans		&kp LA(RET)		&trans		&trans		&trans      
-                        >;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-                sim_layer {
-label= "SYM";
- bindings = <
+			>;
+		};
+		nav_layer {
+			label= "NAV";
+			bindings = <
 			&kp LS(LA(LC(Q)))	&kp LS(LA(LC(W)))	&kp UP_ARROW	&kp LS(LA(LC(P)))	&kp LS(LA(LC(B)))		&kp LS(LA(LC(J)))	&kp LS(LA(LC(L)))	&kp LS(LA(LC(U)))		&kp LS(LA(LC(Y)))	&kp LS(LA(LC(SEMI)))
 			&kp LS(LA(LC(A)))	&kp LEFT_ARROW		&kp DOWN_ARROW	&kp RIGHT_ARROW		&kp LS(LA(LC(G)))		&kp LS(LA(LC(M)))	&kp LS(LA(LC(N)))	&kp LS(LA(LC(E)))		&kp LS(LA(LC(I)))	&kp LS(LA(LC(O)))
 	&trans	&kp LS(LA(LC(Z)))	&kp LS(LA(LC(X)))	&kp LG(C)		&kp LS(LA(LC(D)))	&kp LG(LS(LA(V)))		&kp LS(LA(LC(K)))	&kp LS(LA(LC(H)))	&kp LS(LA(LC(COMMA)))	&kp LS(LA(LC(DOT)))	&kp LS(LA(LC(FSLH)))	&trans
 													&trans				&trans			&trans					&kp RA(BSPC)		&trans				&trans      
-                        >;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-                adjust_layer {
-label= "ADJ";
- bindings = <
+			>;
+		};
+		sym_layer {
+			label= "SYM";
+ 			bindings = <
 			&kp TILDE	&kp HOME			&kp LS(UP_ARROW)	&kp END				&kp PIPE		&kp LBKT	&kp RBKT	&kp PLUS	&trans	&trans
 			&kp GRAVE	&kp LS(LEFT_ARROW)	&kp LS(DOWN_ARROW)	&kp LS(RIGHT_ARROW)	&kp BSLH		&kp LPAR	&kp RPAR	&kp EQUAL	&trans	&trans
 	&trans	&trans		&kp LS(LG(X))		&trans				&trans				&trans			&kp LBRC	&kp RBRC	&trans		&trans	&trans	&trans
-                                        	&trans      		&trans      		&trans			&trans		&trans		&trans
-                        >;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        };
-};
+											&trans      		&trans      		&trans			&trans		&trans		&trans
+			>;
+		};
+	};
+}; 
