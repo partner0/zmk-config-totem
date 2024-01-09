@@ -43,7 +43,7 @@
             label = "BASE";
             bindings = <
                  &kp Q  &kp W  &kp F      &kp P        &kp B           &kp J           &kp L        &kp U         &kp Y    &kp SEMI
-                 &kp A  &kp R  &kp S      &lpht LSHFT T  &kp G         &kp M           &rpht RSHFT N  &kp E         &kp I    &kp O
+                 &kp A  &kp R  &kp S      &kp T        &kp G           &kp M           &kp N        &kp E         &kp I    &kp O
 &mt LSHFT MINUS  &kp Z  &kp X  &kp C      &kp D        &kp V           &kp K           &kp H        &kp COMMA     &kp DOT  &kp FSLH  &mt RCTRL APOS
                                &lt 3 ESC  &lt 2 SPACE  &mt LGUI RET    &mt RSHFT BSPC  &lt 1 SPACE  &mt RALT TAB
             >;
@@ -54,7 +54,7 @@
             bindings = <
         &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
         &kp N1    &kp N2  &kp N3    &kp N4      &kp N5         &kp N6     &kp N7    &kp N8    &kp N9    &kp N0
-&trans  &kp F1    &kp F2  &kp F3    &kp F4      &kp F5         &kp F6     &kp F7    &kp F8    &kp F9    &kp F10   &trans
+&trans  &kp F1    &kp F2  &kp F3    &kp F4      &kp F5         &kp F6     &kp F7    &trans    &trans    &kp F10   &trans
                           &trans    &trans      &kp LA(RET)    &trans     &trans    &trans
             >;
         };
