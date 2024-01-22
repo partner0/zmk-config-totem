@@ -14,27 +14,29 @@
 };
 
 / {
-	behaviors {
-		lpht: left_positional_hold_tap {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <200>;
-			quick-tap-ms = <0>;
-			bindings = <&kp>, <&kp>;
-			hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31>;
-		};
+    behaviors {
+        lpht: left_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&kp>;
 
-		rpht: right_positional_hold_tap {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <200>;
-			quick-tap-ms = <0>;
-			bindings = <&kp>, <&kp>;
-			hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25>;
-		};
-	};
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31>;
+        };
+
+        rpht: right_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -62,10 +64,10 @@
         nav_layer {
             label = "NAV";
             bindings = <
-        &kp LS(LA(LC(Q)))  &kp LS(LA(LC(W)))  &kp UP_ARROW    &kp LS(LA(LC(P)))  &kp LS(LA(LC(B)))    &kp LS(LA(LC(J)))  &kp LS(LA(LC(L)))  &kp LS(LA(LC(U)))      &kp LS(LA(LC(Y)))    &kp LS(LA(LC(SEMI)))
-        &kp LS(LA(LC(A)))  &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp LS(LA(LC(G)))    &kp LS(LA(LC(M)))  &kp LS(LA(LC(N)))  &kp LS(LA(LC(E)))      &kp LS(LA(LC(I)))    &kp LS(LA(LC(O)))
-&trans  &kp LS(LA(LC(Z)))  &kp LS(LA(LC(X)))  &kp LG(C)       &kp LS(LA(LC(D)))  &kp LG(LS(LA(V)))    &kp LS(LA(LC(K)))  &kp LS(LA(LC(H)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LA(LC(FSLH)))  &trans
-                                              &trans          &trans             &trans               &kp RA(BSPC)       &trans             &trans
+          &kp LS(LA(LC(Q)))  &kp LS(LA(LC(W)))  &kp UP_ARROW    &kp LS(LA(LC(P)))  &kp LS(LA(LC(B)))    &kp LS(LA(LC(J)))  &kp LS(LA(LC(L)))  &kp LS(LA(LC(U)))      &kp LS(LA(LC(Y)))    &kp LS(LA(LC(SEMI)))
+          &kp LS(LA(LC(A)))  &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp LS(LA(LC(G)))    &kp LS(LA(LC(M)))  &kp LS(LA(LC(N)))  &kp LS(LA(LC(E)))      &kp LS(LA(LC(I)))    &kp LS(LA(LC(O)))
+&kp BSPC  &kp LS(LA(LC(Z)))  &kp LS(LA(LC(X)))  &kp LG(C)       &kp LS(LA(LC(D)))  &kp LG(LS(LA(V)))    &kp LS(LA(LC(K)))  &kp LS(LA(LC(H)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LA(LC(FSLH)))  &trans
+                                                &trans          &trans             &trans               &kp RA(BSPC)       &trans             &trans
             >;
         };
 
