@@ -74,10 +74,10 @@
         sym_layer {
             label = "SYM";
             bindings = <
-        &kp TILDE  &kp HOME            &kp LS(UP_ARROW)    &kp END              &kp PIPE    &kp LBKT  &kp RBKT  &kp PLUS   &trans  &trans
-        &kp GRAVE  &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &kp BSLH    &kp LPAR  &kp RPAR  &kp EQUAL  &trans  &trans
-&trans  &trans     &kp LS(LG(X))       &trans              &trans               &trans      &kp LBRC  &kp RBRC  &trans     &trans  &trans  &trans
-                                       &trans              &trans               &trans      &trans    &trans    &trans
+        &kp TILDE  &kp HOME            &kp LS(UP_ARROW)    &kp END               &kp PIPE                 &kp LBKT  &kp RBKT  &kp PLUS   &trans  &trans
+        &kp GRAVE  &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)   &kp BSLH                 &kp LPAR  &kp RPAR  &kp EQUAL  &trans  &trans
+&trans  &trans     &kp LS(LG(X))       &trans              &kp LG(LS(LA(LEFT)))  &kp LG(LS(LA(RIGHT)))    &kp LBRC  &kp RBRC  &trans     &trans  &trans  &trans
+                                       &trans              &trans                &trans                   &trans    &trans    &trans
             >;
         };
     };
